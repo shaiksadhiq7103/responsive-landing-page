@@ -1,0 +1,115 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1e1e24;
+    color: #fff;
+}
+
+/* --- Navigation Menu Styles --- */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent; /* Starts transparent */
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    padding: 20px 0;
+}
+
+/* Style applied via JavaScript when scrolling down */
+#navbar.scrolled {
+    background-color: #111115;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 15px 0; /* Subtly shrinks the navbar on scroll */
+}
+
+.nav-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #00adb5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+/* Hover style for individual menu items */
+.nav-links a:hover {
+    color: #00adb5;
+    border-bottom: 2px solid #00adb5;
+}
+
+/* --- Content Section Styles (For Demo Purposes) --- */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
+}
+
+#about { background-color: #25252b; }
+#services { background-color: #1e1e24; }
+#contact { background-color: #151518; }
+
+h1 { font-size: 3.5rem; margin-bottom: 20px; }
+h2 { font-size: 2.5rem; margin-bottom: 20px; color: #00adb5; }
+p { font-size: 1.2rem; max-width: 600px; color: #ccc; }
+
+/* Responsive Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        gap: 20px;
+    }
+    
+    section {
+        padding: 60px 15px;
+    }
+}
